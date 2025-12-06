@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApuntesTorneo | EAZY.CORP</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="APUNTES.css"> 
+</head>
+<body>
+
+    <div id="app" class="min-h-screen flex flex-col">
+
+        <header class="bg-primary shadow-lg sticky top-0 z-50">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+                <a href="#" class="text-white text-2xl font-bold tracking-wider" onclick="showSection('inicio')">
+                    ApuntesTorneo.com
+                </a>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="text-white hover:text-accent transition duration-150" onclick="showSection('inicio')">Inicio</a>
+                    <a href="#" class="text-white hover:text-accent transition duration-150" onclick="showSection('quienes_somos')">Quiénes Somos</a>
+                    <a href="#" class="text-white hover:text-accent transition duration-150" onclick="showSection('la_app')">La App</a>
+                    <a href="#" class="text-white hover:text-accent transition duration-150" onclick="showSection('contacto')">Contacto</a>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <button class="bg-accent text-white font-semibold py-2 px-4 rounded-lg btn-primary" onclick="showSection('login')">
+                        Iniciar Sesión
+                    </button>
+                    <button class="md:hidden text-white focus:outline-none" onclick="toggleMobileMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </nav>
+            
+            <div id="mobile-menu" class="md:hidden hidden bg-primary/95">
+                <a href="#" class="block text-white px-4 py-2 hover:bg-primary/80 transition duration-150" onclick="showSection('inicio'); toggleMobileMenu()">Inicio</a>
+                <a href="#" class="block text-white px-4 py-2 hover:bg-primary/80 transition duration-150" onclick="showSection('quienes_somos'); toggleMobileMenu()">Quiénes Somos</a>
+                <a href="#" class="block text-white px-4 py-2 hover:bg-primary/80 transition duration-150" onclick="showSection('la_app'); toggleMobileMenu()">La App</a>
+                <a href="#" class="block text-white px-4 py-2 hover:bg-primary/80 transition duration-150" onclick="showSection('contacto'); toggleMobileMenu()">Contacto</a>
+            </div>
+        </header>
+
+        <main class="flex-grow">
+            
+            <section id="inicio" class="section active bg-dark-section text-white py-16 sm:py-24">
+                <div class="container mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h1 class="text-5xl lg:text-6xl font-extrabold color-primary mb-4 leading-tight">
+                            Gestión de Torneos <span class="text-accent">Simple y Potente.</span>
+                        </h1>
+                        <p class="text-gray-300 text-lg mb-8">
+                            ApuntesTorneo.com es la plataforma que transforma la manera en que organizas, sigues y participas en tus competiciones deportivas. ¡Toda la información que necesitas, al instante!
+                        </p>
+                        <button class="bg-accent text-white font-bold text-xl py-3 px-8 rounded-xl shadow-lg btn-primary" onclick="showSection('descargar_app')">
+                            Descargar App Ahora
+                        </button>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="logo-apuntestorneo.png.png" alt="Logo de ApuntesTorneo" class="w-full max-w-sm rounded-2xl shadow-2xl border-4 border-gray-200 object-contain p-4 bg-white">
+                    </div>
+                </div>
+                
+                <div class="container mx-auto px-6 lg:px-8 mt-16 pt-12 border-t border-gray-700">
+                    <h2 class="text-3xl font-bold color-primary text-center mb-10">Beneficios Clave</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="p-6 bg-gray-700 rounded-xl shadow-md">
+                            <svg class="w-10 h-10 text-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <h3 class="text-xl font-semibold text-white mb-2">Resultados en Tiempo Real</h3>
+                            <p class="text-gray-300">Actualizaciones inmediatas de marcadores y clasificaciones.</p>
+                        </div>
+                        <div class="p-6 bg-gray-700 rounded-xl shadow-md">
+                            <svg class="w-10 h-10 text-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <h3 class="text-xl font-semibold text-white mb-2">Movilidad Total</h3>
+                            <p class="text-gray-300">Aplicación móvil dedicada para llevar tu torneo a todas partes.</p>
+                        </div>
+                        <div class="p-6 bg-gray-700 rounded-xl shadow-md">
+                            <svg class="w-10 h-10 text-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.2 1.2 0 011.604 1.604L16 17l-4 4-4-4"></path></svg>
+                            <h3 class="text-xl font-semibold text-white mb-2">Fácil Administración</h3>
+                            <p class="text-gray-300">Panel simple para la gestión de usuarios y descargas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="quienes_somos" class="section hidden bg-dark-section text-white py-16 sm:py-24">
+                <div class="container mx-auto px-6 lg:px-8">
+                    <h2 class="text-4xl font-bold color-primary mb-8 text-center">Quiénes Somos</h2>
+                    <div class="max-w-4xl mx-auto space-y-8 text-gray-300 text-lg">
+                        <p>ApuntesTorneo.com nació de la necesidad de simplificar la gestión de eventos y competiciones deportivas amateur. Vimos la frustración de organizadores y participantes al usar métodos obsoletos y decidimos crear una solución digital, potente y, sobre todo, fácil de usar.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-accent mb-3">Nuestra Misión</h3>
+                                <p>Proveer la herramienta más eficiente y amigable para la gestión de torneos, permitiendo a los organizadores enfocarse en el evento y a los participantes disfrutar al máximo de la competición.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-accent mb-3">Nuestra Visión</h3>
+                                <p>Ser el estándar de oro en la gestión de torneos deportivos a nivel regional, ampliando nuestra cobertura a múltiples disciplinas y comunidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="la_app" class="section hidden bg-dark-section text-white py-16 sm:py-24">
+                <div class="container mx-auto px-6 lg:px-8">
+                    <h2 class="text-4xl font-bold color-primary mb-12 text-center">La Aplicación Móvil</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <p class="text-xl text-gray-300">
+                                La App de ApuntesTorneo es el centro de tu experiencia deportiva. Diseñada para la movilidad, te ofrece todas las funciones necesarias para seguir o gestionar un torneo desde cualquier lugar.
+                            </p>
+                            <ul class="space-y-4 text-gray-300">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    <p><strong class="color-primary">Gestión de Partidos:</strong> Carga de resultados, horarios y sedes en tiempo real.</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    <p><strong class="color-primary">Perfiles Personalizados:</strong> Consulta tu historial de partidos y estadísticas individuales (solo para usuarios registrados).</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    <p><strong class="color-primary">Notificaciones:</strong> Alertas sobre próximos partidos o cambios de horario.</p>
+                                </li>
+                            </ul>
+                            <button class="mt-6 bg-primary text-white font-bold text-lg py-3 px-6 rounded-xl shadow-lg btn-primary" onclick="showSection('descargar_app')">
+                                Quiero la App
+                            </button>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="logo-apuntestorneo.png.png" alt="Logo de ApuntesTorneo" class="w-full max-w-sm rounded-2xl shadow-2xl border-4 border-gray-200 object-contain p-4 bg-white">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacto" class="section hidden bg-dark-section text-white py-16 sm:py-24">
+                <div class="container mx-auto px-6 lg:px-8">
+                    <h2 class="text-4xl font-bold color-primary mb-4 text-center">Contáctanos</h2>
+                    <p class="text-gray-300 text-lg mb-10 text-center">Envíanos un mensaje y te responderemos tan pronto como sea posible.</p>
+                    
+                    <div class="max-w-lg mx-auto p-8 bg-white rounded-xl shadow-xl">
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-gray-700 font-semibold mb-2">Nombre</label>
+                                <input type="text" id="contact-name" name="nombre" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                                <input type="email" id="contact-email" name="correo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                                <textarea id="contact-message" name="mensaje" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-accent text-white font-bold py-3 rounded-lg shadow-md btn-primary">
+                                Enviar Mensaje
+                            </button>
+                            <p id="contact-message-status" class="mt-4 text-center hidden"></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="login" class="section hidden bg-dark-section text-white py-16 sm:py-24 flex items-center justify-center">
+                <div class="max-w-sm w-full mx-auto p-8 bg-white rounded-xl shadow-2xl border-t-8 border-accent">
+                    <h2 class="text-3xl font-bold color-primary mb-6 text-center">Iniciar Sesión</h2>
+                    <form onsubmit="handleAuthSubmit(event, 'login')">
+                        <div class="mb-4">
+                            <label for="login-email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                            <input type="email" id="login-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="login-password" class="block text-gray-700 font-semibold mb-2">Contraseña</label>
+                            <input type="password" id="login-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
+                            <a href="#" class="text-sm text-primary hover:underline mt-1 block text-right" onclick="showMessage('Funcionalidad de recuperación de contraseña aún no implementada.')">¿Olvidaste tu contraseña? (RF3)</a>
+                        </div>
+                        <button type="submit" class="w-full bg-accent text-white font-bold py-3 rounded-lg shadow-md btn-primary">
+                            Entrar
+                        </button>
+                        <p class="mt-4 text-center text-gray-600">
+                            ¿No tienes cuenta? <a href="#" class="text-primary font-semibold hover:underline" onclick="showSection('registro')">Regístrate</a>
+                        </p>
+                        <p id="login-status" class="mt-4 text-center hidden text-sm"></p>
+                    </form>
+                </div>
+            </section>
+
+            <section id="registro" class="section hidden bg-dark-section text-white py-16 sm:py-24 flex items-center justify-center">
+                <div class="max-w-sm w-full mx-auto p-8 bg-white rounded-xl shadow-2xl border-t-8 border-accent">
+                    <h2 class="text-3xl font-bold color-primary mb-6 text-center">Crear Cuenta</h2>
+                    <form onsubmit="handleAuthSubmit(event, 'registro')">
+                        <div class="mb-4">
+                            <label for="register-name" class="block text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                            <input type="text" id="register-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="register-email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                            <input type="email" id="register-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="register-password" class="block text-gray-700 font-semibold mb-2">Contraseña</label>
+                            <input type="password" id="register-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" required>
+                        </div>
+                        <button type="submit" class="w-full bg-accent text-white font-bold py-3 rounded-lg shadow-md btn-primary">
+                            Registrarse
+                        </button>
+                        <p class="mt-4 text-center text-gray-600">
+                            ¿Ya tienes cuenta? <a href="#" class="text-primary font-semibold hover:underline" onclick="showSection('login')">Iniciar Sesión</a>
+                        </p>
+                        <p id="register-status" class="mt-4 text-center hidden text-sm"></p>
+                    </form>
+                </div>
+            </section>
+
+            <section id="descargar_app" class="section hidden bg-dark-section text-white py-16 sm:py-24 flex items-center justify-center text-center">
+                <div class="max-w-xl mx-auto p-10 bg-gray-100 rounded-xl shadow-2xl border-t-8 border-primary">
+                    <div id="download-content" class="hidden">
+                        <svg class="w-20 h-20 text-accent mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        <h2 class="text-4xl font-bold color-primary mb-4">¡Descarga tu App!</h2>
+                        <p class="text-gray-300 text-lg mb-8">
+                            Felicidades, **<span id="user-display-name" class="font-bold text-accent">Usuario Registrado</span>**. Haz clic en tu plataforma para iniciar la descarga.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="Apuntes_torneo.zip" download="ApuntesTorneo_v1.apk" class="bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-md btn-primary flex items-center justify-center" target="_blank" rel="noopener noreferrer">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.01L6 12.01l1.41-1.41L11 14.19l7.59-7.59L20 8.01l-9 9z"/></svg>
+                                Descargar APK (Android)
+                            </a>
+                            <a href="#" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-lg shadow-md btn-primary flex items-center justify-center" aria-disabled="true" title="Próximamente en App Store">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19.7 13.7c-.2.2-.4.3-.7.3h-.7c-.3 0-.5-.1-.7-.3l-1.5-1.5c-.2-.2-.3-.4-.3-.7V9.7c0-.3.1-.5.3-.7l1.5-1.5c.2-.2.4-.3.7-.3h.7c.3 0 .5.1.7.3l1.5 1.5c.2.2.3.4.3.7V9.7c0 .3-.1.5-.3.7l-1.5 1.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.01L8 12.01l1.41-1.41L13 14.19l7.59-7.59L22 8.01l-9 9z"/></svg>
+                                iOS (Próximamente)
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="access-required">
+                        <svg class="w-20 h-20 text-red-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                        <h2 class="text-4xl font-bold color-primary mb-4">Acceso Restringido</h2>
+                        <p class="text-gray-300 text-lg mb-8">
+                            Para descargar la aplicación, por favor, inicia sesión o regístrate.
+                        </p>
+                        <button class="bg-accent text-white font-bold text-lg py-3 px-6 rounded-xl shadow-lg btn-primary" onclick="showSection('login')">
+                            Iniciar Sesión
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="bg-primary text-white py-8 mt-12">
+            <div class="container mx-auto px-6 lg:px-8 text-center">
+                <p>&copy; CRISMAR SERVICIOS Y PROGRAMAS, SRL.. | Todos los derechos reservados.</p>
+                <p class="text-sm mt-2">EDGAR ADRIAN X DERIAN COLLADO </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="custom-modal" class="fixed inset-0 bg-gray-600 bg-opacity-75 hidden items-center justify-center z-[100]">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full mx-4 border-t-4 border-accent">
+            <h3 class="text-xl font-bold color-primary mb-4" id="modal-title">Atención</h3>
+            <p id="modal-message" class="text-gray-700 mb-6"></p>
+            <div class="flex justify-end">
+                <button class="bg-accent text-white font-semibold py-2 px-4 rounded-lg btn-primary" onclick="hideMessage()">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="APUNTES.js"></script>
+</body>
+</html>

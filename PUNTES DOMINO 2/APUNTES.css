@@ -1,0 +1,58 @@
+/* ------------------------------------------------ */
+/* Tipografía y Colores */
+/* ------------------------------------------------ */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e2dfdf; /* Gris claro de fondo general */
+}
+
+/* Definición de colores según el diseño visual: */
+/* Azul Principal: #0055A4 */
+/* ROJO Acento: #FF0000 */
+/* Fondo de Sección Oscuro: #2D323F */
+
+.color-primary { color: #0055A4; }
+.bg-primary { background-color: #0055A4; }
+.bg-accent { background-color: #FF0000; }
+.text-accent { color: #FF0000; }
+.bg-dark-section { background-color: #2D323F; } /* CLASE PARA EL NUEVO FONDO OSCURO */
+
+/* ------------------------------------------------ */
+/* Estilos para Botones y Animaciones */
+/* ------------------------------------------------ */
+.btn-primary {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------------------ */
+/* OVERRIDE: Asegura que el texto que escribes en inputs/textarea/select se vea negro */
+/* ------------------------------------------------ */
+:root { --site-text-black: #000000; }
+
+input,
+textarea,
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+[contenteditable="true"] {
+  color: var(--site-text-black) !important;
+}
+
+/* Mejorar contraste del placeholder sin afectar el texto real */
+input::placeholder,
+textarea::placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+/* Sólo afecta al párrafo dentro de la sección "descargar_app" */
+#descargar_app p.text-gray-300.text-lg.mb-8,
+#descargar_app p.text-gray-300.text-lg.mb-8 * {
+  color: #000000 !important;
+}
